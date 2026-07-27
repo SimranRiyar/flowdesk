@@ -1,3 +1,7 @@
+# FlowDesk
+
+FlowDesk is a production-ready admin dashboard that combines secure authentication flows (register, email OTP verification, login, logout) with a live analytics dashboard and user management system — built entirely from scratch using Next.js, TypeScript, Python, and PostgreSQL.
+
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started
