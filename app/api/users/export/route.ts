@@ -1,6 +1,7 @@
 import { NextResponse } from "next/server";
 import { prisma } from "../../../../lib/prisma";
 import { getSession } from "../../../../lib/auth";
+import { Role } from "../../../generated/prisma";
 
 export async function GET(request: Request) {
   const session = await getSession();
@@ -12,7 +13,8 @@ export async function GET(request: Request) {
   const search = searchParams.get("search") || "";
   const role = searchParams.get("role") || "";
 
-  const roleFilter = role === "admin" || role === "user" ? { role } : {};
+  const roleFilter =
+    role === "admin" || role === "user" ? { role: role as Role } : {};
 
   const users = await prisma.user.findMany({
     where: {
